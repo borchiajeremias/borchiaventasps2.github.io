@@ -233,3 +233,16 @@ footer{
     background:#081627;
 
 }
+
+window.onload = function(){
+
+setTimeout(()=>{
+
+loader.style.opacity="0";
+
+loader.style.visibility="hidden";
+
+},2500);
+
+}
+
