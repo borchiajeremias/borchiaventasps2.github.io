@@ -335,3 +335,12 @@ color:white;
 
 }
 
+.hamburguesa{
+
+display:none;
+
+font-size:35px;
+
+cursor:pointer;
+
+}
