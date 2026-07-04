@@ -43,3 +43,20 @@ document.querySelectorAll(".hidden").forEach(el=>{
 observer.observe(el);
 
 });
+let carrito=JSON.parse(localStorage.getItem("carrito"))||[];
+
+actualizar();
+
+function comprar(nombre){
+
+carrito.push(nombre);
+
+localStorage.setItem("carrito",JSON.stringify(carrito));
+
+actualizar();
+
+}
+
+function actualizar(){
+
+contador.innerText=carrito.length;
