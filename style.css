@@ -393,3 +393,24 @@ box-shadow:
 transform:scale(1.08);
 
 }
+.cart{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+background:#00bfff;
+
+padding:15px 20px;
+
+border-radius:40px;
+
+font-size:20px;
+
+cursor:pointer;
+
+box-shadow:0 0 25px #00bfff;
+
+}
