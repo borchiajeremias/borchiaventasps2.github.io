@@ -344,3 +344,21 @@ font-size:35px;
 cursor:pointer;
 
 }
+.hidden{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
