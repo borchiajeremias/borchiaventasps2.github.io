@@ -362,3 +362,34 @@ transform:translateY(0);
 
 }
 
+.card{
+
+transition:.4s;
+
+overflow:hidden;
+
+}
+
+.card img{
+
+transition:.5s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px) scale(1.04);
+
+box-shadow:
+
+0 0 15px #00bfff,
+
+0 0 35px #00bfff;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
