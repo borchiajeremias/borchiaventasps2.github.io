@@ -101,33 +101,37 @@
 
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .contacto-grid{
+    .contacto-grid {
 
-        grid-template-columns:1fr;
-
-    }
-
-    .redes-links{
-
-        flex-direction:column;
-        align-items:center;
+        grid-template-columns: 1fr;
 
     }
 
-    .redes-links a{
+    .redes-links {
 
-        width:90%;
-        max-width:300px;
+        flex-direction: column;
+        align-items: center;
 
     }
-    .formulario-contacto{
 
-    margin:50px 20px;
+    .redes-links a {
 
-    padding:25px;
+        width: 90%;
+        max-width: 300px;
 
-}
+    }
+
+    .formulario-contacto {
+
+        width: calc(100% - 40px);
+        max-width: 700px;
+
+        margin: 50px auto;
+
+        padding: 25px;
+
+    }
 
 }
