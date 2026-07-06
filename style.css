@@ -5,19 +5,12 @@
     font-weight:normal;
     font-style:normal;
 }
-/* =========================
-   RESET
-========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
-/* =========================
-   BODY
-========================= */
 
 @font-face{
     font-family:"Geist Pixel";
@@ -33,9 +26,6 @@ body{
 html{
     scroll-behavior:smooth;
 }
-/* =========================
-   HEADER
-========================= */
 
 header{
     position:fixed;
@@ -66,10 +56,6 @@ header{
     color:#00c3ff;
 }
 
-/* =========================
-   NAVEGACIÓN
-========================= */
-
 nav ul{
     display:flex;
     list-style:none;
@@ -88,10 +74,6 @@ nav a:hover{
     background:#00bfff;
     color:white;
 }
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
     height:90vh;
@@ -112,10 +94,6 @@ nav a:hover{
     margin-bottom:30px;
 }
 
-/* =========================
-   BOTONES
-========================= */
-
 .btn{
     display:inline-block;
     background:#00bfff;
@@ -129,10 +107,6 @@ nav a:hover{
 .btn:hover{
     transform:scale(1.05);
 }
-
-/* =========================
-   DESTACADOS
-========================= */
 
 section{
     scroll-margin-top:120px;
@@ -281,10 +255,6 @@ section{
     transform:scale(1.08);
 }
 
-/* =========================
-   INFORMACIÓN
-========================= */
-
 .info{
     padding:80px;
     text-align:center;
@@ -309,19 +279,11 @@ section{
     box-shadow:0 0 15px rgba(0,195,255,.4);
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 footer{
     padding:25px;
     text-align:center;
     background:#081627;
 }
-
-/* =========================
-   EFECTO CRT
-========================= */
 
 .crt{
     position:fixed;
@@ -355,10 +317,6 @@ footer{
 
 }
 
-/* =========================
-   ANIMACIONES
-========================= */
-
 .hidden{
     opacity:0;
     transform:translateY(80px);
@@ -370,10 +328,6 @@ footer{
     transform:translateY(0);
 }
 
-/* =========================
-   MENÚ HAMBURGUESA
-========================= */
-
 .hamburguesa{
     display:none;
     position:fixed;
@@ -383,10 +337,6 @@ footer{
     cursor:pointer;
     z-index:1001;
 }
-
-/* =========================
-   CARRITO
-========================= */
 
 .cart{
     position:fixed;
@@ -400,10 +350,6 @@ footer{
     box-shadow:0 0 25px #00bfff;
     z-index:1000;
 }
-
-/* =========================
-   LOADER
-========================= */
 
 #loader{
     position:fixed;
@@ -471,10 +417,6 @@ footer{
     color:#b8dfff;
 }
 
-/* =========================
-   CONTACTO
-========================= */
-
 .contacto{
 
     padding:80px 20px;
@@ -538,7 +480,6 @@ footer{
 
 }
 
-/* Redes */
 
 .redes{
 
@@ -580,9 +521,6 @@ footer{
     transform:translateY(-5px);
 
 }
-/*=========================
-    MODAL CARRITO
-=========================*/
 
 .modal{
 
@@ -718,3 +656,104 @@ footer{
 
 }
 
+.formulario-contacto{
+
+    max-width:700px;
+
+    margin:70px auto;
+
+    background:#10243d;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 0 20px rgba(0,191,255,.2);
+
+}
+
+.formulario-contacto h3{
+
+    text-align:center;
+
+    color:#00bfff;
+
+    margin-bottom:30px;
+
+}
+
+.formulario-contacto form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea{
+
+    background:#081627;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus{
+
+    border-color:#00bfff;
+
+    box-shadow:0 0 12px rgba(0,191,255,.5);
+
+}
+
+.formulario-contacto textarea{
+
+    resize:vertical;
+
+}
+
+.formulario-contacto button{
+
+    background:#00bfff;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.formulario-contacto button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px #00bfff;
+
+}
