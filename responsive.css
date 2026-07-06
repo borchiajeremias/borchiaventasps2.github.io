@@ -1,79 +1,123 @@
-@media(max-width:768px){
+/* =========================
+   TABLETS Y CELULARES
+========================= */
 
-header{
+@media (max-width: 768px) {
 
-flex-direction:column;
+    /* Header */
 
-padding:20px;
+    header{
+        flex-direction:column;
+        padding:20px;
+        gap:15px;
+    }
+
+    /* Menú hamburguesa */
+
+    .hamburguesa{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:100px;
+        left:0;
+        width:100%;
+        background:#081627;
+        padding:20px;
+        text-align:center;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    /* Hero */
+
+    .hero{
+        padding:0 20px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    /* Cards */
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+        max-width:320px;
+    }
+
+    /* Beneficios */
+
+    .beneficios{
+        grid-template-columns:1fr;
+    }
+
+    /* Secciones */
+
+    .destacados,
+    .info{
+        padding:50px 20px;
+    }
+
+    /* Carrito */
+
+    .cart{
+        right:20px;
+        bottom:20px;
+        font-size:18px;
+        padding:12px 18px;
+    }
 
 }
 
-nav ul{
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
 
-flex-direction:column;
+@media (max-width: 480px) {
 
-margin-top:20px;
+    .logo{
+        font-size:24px;
+    }
 
-}
+    .hero h1{
+        font-size:28px;
+    }
 
-.hero h1{
+    .hero p{
+        font-size:16px;
+    }
 
-font-size:35px;
+    .btn{
+        padding:12px 24px;
+        font-size:15px;
+    }
 
-}
+    .card{
+        width:100%;
+    }
 
-.cards{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-.beneficios{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-.hamburguesa{
-
-display:block;
-
-}
-
-nav{
-
-display:none;
-
-position:absolute;
-
-top:80px;
-
-left:0;
-
-width:100%;
-
-background:#081627;
-
-padding:20px;
-
-}
-
-nav.active{
-
-display:block;
-
-}
-
-nav ul{
-
-flex-direction:column;
-
-gap:20px;
-
-}
+    .cart{
+        font-size:16px;
+        padding:10px 16px;
+    }
 
 }
