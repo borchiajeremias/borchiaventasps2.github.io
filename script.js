@@ -82,66 +82,69 @@ function actualizarContador() {
 
 }
 const modal = document.getElementById("modal-carrito");
-
 const lista = document.getElementById("lista-carrito");
-
 const total = document.getElementById("total-productos");
 
+const botonCarrito = document.querySelector(".cart");
 const cerrar = document.querySelector(".cerrar");
-
 const vaciar = document.getElementById("vaciar");
-
 const pagar = document.getElementById("pagar");
 
-const botonCarrito = document.querySelector(".cart");
-
-botonCarrito.addEventListener("click",()=>{
+botonCarrito.addEventListener("click", () => {
 
     mostrarCarrito();
 
-    modal.style.display="flex";
+    modal.style.display = "flex";
 
 });
 
-cerrar.addEventListener("click",()=>{
+cerrar.addEventListener("click", () => {
 
-    modal.style.display="none";
+    modal.style.display = "none";
 
 });
 
-function mostrarCarrito(){
+function mostrarCarrito() {
 
-    lista.innerHTML="";
+    lista.innerHTML = "";
 
-    carrito.forEach((juego,index)=>{
+    if (carrito.length === 0) {
 
-        lista.innerHTML+=`
+        lista.innerHTML = "<p>El carrito está vacío.</p>";
 
-        <div class="item-carrito">
+    } else {
 
-            <span>${juego}</span>
+        carrito.forEach((producto, indice) => {
 
-            <button onclick="eliminarProducto(${index})">
+            lista.innerHTML += `
 
-                🗑
+                <div class="item-carrito">
 
-            </button>
+                    <span>${producto}</span>
 
-        </div>
+                    <button onclick="eliminarProducto(${indice})">
 
-        `;
+                        🗑️
 
-    });
+                    </button>
 
-    total.innerText="Productos: "+carrito.length;
+                </div>
+
+            `;
+
+        });
+
+    }
+
+    total.textContent = `Productos: ${carrito.length}`;
 
 }
 
-function eliminarProducto(i){
+function eliminarProducto(indice) {
 
-    carrito.splice(i,1);
+    carrito.splice(indice, 1);
 
-    localStorage.setItem("carrito",JSON.stringify(carrito));
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 
     actualizarContador();
 
@@ -149,11 +152,11 @@ function eliminarProducto(i){
 
 }
 
-vaciar.addEventListener("click",()=>{
+vaciar.addEventListener("click", () => {
 
-    carrito=[];
+    carrito = [];
 
-    localStorage.setItem("carrito","[]");
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 
     actualizarContador();
 
@@ -161,15 +164,29 @@ vaciar.addEventListener("click",()=>{
 
 });
 
-pagar.addEventListener("click",()=>{
+pagar.addEventListener("click", () => {
 
-    if(carrito.length==0){
+    if (carrito.length === 0) {
 
         alert("El carrito está vacío.");
 
         return;
 
     }
+
+    alert("¡Gracias por tu compra!");
+
+    carrito = [];
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContador();
+
+    mostrarCarrito();
+
+    modal.style.display = "none";
+
+});
 
     alert("¡Gracias por tu compra!");
 
