@@ -206,3 +206,14 @@ pagar.addEventListener("click", () => {
     modal.style.display = "none";
 
 });
+const formulario = document.querySelector(".formulario-contacto form");
+
+formulario.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+
+    alert("¡Gracias por comunicarte con RetroStation! Te responderemos a la brevedad.");
+
+    formulario.reset();
+
+});
