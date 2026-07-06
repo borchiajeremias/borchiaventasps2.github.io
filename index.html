@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
     <meta charset="UTF-8">
@@ -13,148 +14,161 @@
 </head>
 
 <body>
+
+    <!-- Loader -->
+    <div id="loader">
+
+        <div class="logo-loader">
+            RETRO<span>STATION</span>
+        </div>
+
+        <div class="loader-bars">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <p>Loading Memory Card...</p>
+
+    </div>
+
+    <!-- Menú hamburguesa -->
     <div class="hamburguesa">
-
-☰
-
-</div>
-<div id="loader">
-
-    <div class="logo-loader">
-        RETRO<span>STATION</span>
+        ☰
     </div>
 
-    <div class="loader-bars">
-
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </div>
-
-    <p>Loading Memory Card...</p>
-
-</div>
+    <!-- Carrito -->
     <div class="cart">
+        🛒 <span id="contador">0</span>
+    </div>
 
-🛒 <span id="contador">0</span>
-
-</div>
+    <!-- Efecto CRT -->
     <div class="crt"></div>
-<header>
 
-    <div class="logo">
-        RETRO<span>STATION</span>
-    </div>
+    <!-- Header -->
+    <header>
 
-    <nav>
+        <div class="logo">
+            RETRO<span>STATION</span>
+        </div>
 
-        <ul>
+        <nav>
 
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <ul>
 
-        </ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
 
-    </nav>
+                <li>
+                    <a href="catalogo.html">Catálogo</a>
+                </li>
 
-</header>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
 
+            </ul>
 
-<section class="hero">
+        </nav>
 
-    <div class="hero-text">
+    </header>
 
-        <h1>Reviví la mejor época de PlayStation 2</h1>
+    <!-- Hero -->
+    <section class="hero">
 
-        <p>
-            Encontrá los clásicos que marcaron generaciones.
-        </p>
+        <div class="hero-text">
 
-        <a href="catalogo.html" class="btn">
-            Ver Catálogo
-        </a>
+            <h1>Reviví la mejor época de PlayStation 2</h1>
 
-    </div>
+            <p>
+                Encontrá los clásicos que marcaron generaciones.
+            </p>
 
-</section>
-
-<section class="destacados hidden">
-<section class="destacados">
-
-    <h2>Juegos Destacados</h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <img src="img/juegos/gow2.jpg">
-
-            <h3>God of War II</h3>
-
-            <button onclick="comprar('God of War II')">
-                Comprar
-            </button>
+            <a href="catalogo.html" class="btn">
+                Ver Catálogo
+            </a>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <img src="img/juegos/re4.jpg">
+    <!-- Juegos destacados -->
+    <section class="destacados hidden">
 
-            <h3>Resident Evil 4</h3>
+        <h2>Juegos Destacados</h2>
 
-            <button onclick="comprar('Resident Evil 4')">
-                Comprar
-            </button>
+        <div class="cards">
+
+            <div class="card">
+
+                <img src="img/juegos/gow2.jpg" alt="God of War II">
+
+                <h3>God of War II</h3>
+
+                <button onclick="comprar('God of War II')">
+                    Comprar
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <img src="img/juegos/re4.jpg" alt="Resident Evil 4">
+
+                <h3>Resident Evil 4</h3>
+
+                <button onclick="comprar('Resident Evil 4')">
+                    Comprar
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <img src="img/juegos/gta.jpg" alt="GTA San Andreas">
+
+                <h3>GTA San Andreas</h3>
+
+                <button onclick="comprar('GTA San Andreas')">
+                    Comprar
+                </button>
+
+            </div>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <img src="img/juegos/gta.jpg">
+    <!-- Información -->
+    <section class="info">
 
-            <h3>GTA San Andreas</h3>
+        <h2>¿Por qué elegir RetroStation?</h2>
 
-            <button onclick="comprar('GTA San Andreas')">
-                Comprar
-            </button>
+        <div class="beneficios">
+
+            <div>🎮 Más de 500 juegos disponibles</div>
+
+            <div>🚚 Envíos a todo el país</div>
+
+            <div>💿 Versiones originales y reediciones</div>
+
+            <div>⭐ Atención personalizada</div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- Footer -->
+    <footer>
 
+        <p>© 2026 RetroStation</p>
 
-<section class="info">
+    </footer>
 
-    <h2>¿Por qué elegir RetroStation?</h2>
-
-    <div class="beneficios">
-
-        <div>🎮 Más de 500 juegos disponibles</div>
-
-        <div>🚚 Envíos a todo el país</div>
-
-        <div>💿 Versiones originales y reediciones</div>
-
-        <div>⭐ Atención personalizada</div>
-
-    </div>
-
-</section>
-
-
-<footer>
-
-    <p>© 2026 RetroStation</p>
-
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
