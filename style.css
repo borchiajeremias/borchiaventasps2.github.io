@@ -661,15 +661,15 @@ footer{
     width:100%;
     max-width:700px;
 
-    margin:70px auto;
-
-    padding:40px;
+    margin:70px auto 0;
 
     background:#10243d;
 
-    border:1px solid rgba(255,255,255,.08);
+    padding:40px;
 
     border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.08);
 
     box-shadow:0 0 20px rgba(0,191,255,.2);
 
