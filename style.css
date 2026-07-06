@@ -19,8 +19,13 @@
    BODY
 ========================= */
 
+@font-face{
+    font-family:"Geist Pixel";
+    src:url("GeistPixel-Regular-VariableFont_ELSH.ttf") format("truetype");
+}
+
 body{
-    font-family: "Geist Pixel", sans-serif;
+    font-family:"Geist Pixel", sans-serif;
     background:#061120;
     color:white;
 }
