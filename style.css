@@ -134,7 +134,93 @@ nav a:hover{
     text-align:center;
     margin-bottom:40px;
 }
+.catalogo{
 
+    padding:80px 40px;
+    text-align:center;
+
+}
+
+.catalogo h2{
+
+    font-size:40px;
+    margin-bottom:15px;
+
+}
+
+.catalogo-texto{
+
+    color:#b7c8d8;
+    margin-bottom:50px;
+
+}
+
+.catalogo-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+
+}
+
+.juego{
+
+    background:#10243d;
+    padding:18px;
+    border-radius:15px;
+    transition:.35s;
+    overflow:hidden;
+
+}
+
+.juego:hover{
+
+    transform:translateY(-10px);
+    box-shadow:
+        0 0 15px #00bfff,
+        0 0 30px rgba(0,191,255,.5);
+
+}
+
+.juego img{
+
+    width:100%;
+    border-radius:10px;
+    transition:.4s;
+
+}
+
+.juego:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.juego h3{
+
+    margin:18px 0;
+    font-size:18px;
+
+}
+
+.juego button{
+
+    width:100%;
+    border:none;
+    background:#00bfff;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.juego button:hover{
+
+    background:#00d8ff;
+
+}
 .cards{
     display:flex;
     justify-content:center;
