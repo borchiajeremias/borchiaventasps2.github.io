@@ -1,62 +1,83 @@
-function comprar(juego){
+/* =========================
+   VARIABLES
+========================= */
 
-    alert(juego + " agregado al carrito.");
+const loader = document.getElementById("loader");
+const menu = document.querySelector(".hamburguesa");
+const nav = document.querySelector("nav");
+const contador = document.getElementById("contador");
 
-}
+/* =========================
+   LOADER
+========================= */
 
-window.onload = function(){
+window.addEventListener("load", () => {
 
-setTimeout(()=>{
+    setTimeout(() => {
 
-loader.style.opacity="0";
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
 
-loader.style.visibility="hidden";
-
-},2500);
-
-}
-const menu=document.querySelector(".hamburguesa");
-
-const nav=document.querySelector("nav");
-
-menu.onclick=()=>{
-
-nav.classList.toggle("active");
-
-}
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
+    }, 2500);
 
 });
 
+/* =========================
+   MENÚ HAMBURGUESA
+========================= */
+
+menu.addEventListener("click", () => {
+
+    nav.classList.toggle("active");
+
 });
 
-document.querySelectorAll(".hidden").forEach(el=>{
+/* =========================
+   ANIMACIONES AL HACER SCROLL
+========================= */
 
-observer.observe(el);
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
 
 });
-let carrito=JSON.parse(localStorage.getItem("carrito"))||[];
 
-actualizar();
+document.querySelectorAll(".hidden").forEach((elemento) => {
 
-function comprar(nombre){
+    observer.observe(elemento);
 
-carrito.push(nombre);
+});
 
-localStorage.setItem("carrito",JSON.stringify(carrito));
+/* =========================
+   CARRITO
+========================= */
 
-actualizar();
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+actualizarContador();
+
+function comprar(nombre) {
+
+    carrito.push(nombre);
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarContador();
+
+    alert(`${nombre} agregado al carrito.`);
 
 }
 
-function actualizar(){
+function actualizarContador() {
 
-contador.innerText=carrito.length;
+    contador.textContent = carrito.length;
+
+}
