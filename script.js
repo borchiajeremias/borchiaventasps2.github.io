@@ -33,7 +33,7 @@ menu.addEventListener("click", () => {
 });
 
 /* =========================
-   ANIMACIONES AL HACER SCROLL
+   ANIMACIONES
 ========================= */
 
 const observer = new IntersectionObserver((entries) => {
@@ -72,6 +72,8 @@ function comprar(nombre) {
 
     actualizarContador();
 
+    mostrarCarrito();
+
     alert(`${nombre} agregado al carrito.`);
 
 }
@@ -81,6 +83,11 @@ function actualizarContador() {
     contador.textContent = carrito.length;
 
 }
+
+/* =========================
+   MODAL CARRITO
+========================= */
+
 const modal = document.getElementById("modal-carrito");
 const lista = document.getElementById("lista-carrito");
 const total = document.getElementById("total-productos");
@@ -90,6 +97,8 @@ const cerrar = document.querySelector(".cerrar");
 const vaciar = document.getElementById("vaciar");
 const pagar = document.getElementById("pagar");
 
+/* Abrir */
+
 botonCarrito.addEventListener("click", () => {
 
     mostrarCarrito();
@@ -98,11 +107,27 @@ botonCarrito.addEventListener("click", () => {
 
 });
 
+/* Cerrar */
+
 cerrar.addEventListener("click", () => {
 
     modal.style.display = "none";
 
 });
+
+/* Cerrar haciendo click afuera */
+
+window.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+        modal.style.display = "none";
+
+    }
+
+});
+
+/* Mostrar carrito */
 
 function mostrarCarrito() {
 
@@ -140,6 +165,8 @@ function mostrarCarrito() {
 
 }
 
+/* Eliminar producto */
+
 function eliminarProducto(indice) {
 
     carrito.splice(indice, 1);
@@ -152,6 +179,8 @@ function eliminarProducto(indice) {
 
 }
 
+/* Vaciar carrito */
+
 vaciar.addEventListener("click", () => {
 
     carrito = [];
@@ -163,6 +192,8 @@ vaciar.addEventListener("click", () => {
     mostrarCarrito();
 
 });
+
+/* Pagar */
 
 pagar.addEventListener("click", () => {
 
@@ -187,18 +218,3 @@ pagar.addEventListener("click", () => {
     modal.style.display = "none";
 
 });
-
-    alert("¡Gracias por tu compra!");
-
-    carrito=[];
-
-    localStorage.setItem("carrito","[]");
-
-    actualizarContador();
-
-    mostrarCarrito();
-
-    modal.style.display="none";
-
-});
-
