@@ -1,15 +1,11 @@
-/* =========================
-   VARIABLES
-========================= */
+/* VARIABLES */
 
 const loader = document.getElementById("loader");
 const menu = document.querySelector(".hamburguesa");
 const nav = document.querySelector("nav");
 const contador = document.getElementById("contador");
 
-/* =========================
-   LOADER
-========================= */
+/* LOADER */
 
 window.addEventListener("load", () => {
 
@@ -22,9 +18,7 @@ window.addEventListener("load", () => {
 
 });
 
-/* =========================
-   MENÚ HAMBURGUESA
-========================= */
+/* MENÚ HAMBURGUESA */
 
 menu.addEventListener("click", () => {
 
@@ -32,9 +26,7 @@ menu.addEventListener("click", () => {
 
 });
 
-/* =========================
-   ANIMACIONES
-========================= */
+/* ANIMACIONES */
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -56,9 +48,7 @@ document.querySelectorAll(".hidden").forEach((elemento) => {
 
 });
 
-/* =========================
-   CARRITO
-========================= */
+/* CARRITO */
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
@@ -84,9 +74,7 @@ function actualizarContador() {
 
 }
 
-/* =========================
-   MODAL CARRITO
-========================= */
+/* CARRITO */
 
 const modal = document.getElementById("modal-carrito");
 const lista = document.getElementById("lista-carrito");
