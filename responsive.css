@@ -121,3 +121,28 @@
     }
 
 }
+/* CONTACTO */
+
+@media (max-width:768px){
+
+    .contacto-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .redes-links{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .redes-links a{
+
+        width:90%;
+        max-width:300px;
+
+    }
+
+}
